@@ -1,0 +1,64 @@
+.navbar {
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  &.scrolled {
+    background-color: var(--main-color);
+  }
+  .container {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    .left {
+      align-items: center;
+      display: flex;
+      span {
+        padding: 0 15px;
+        align-items: center;
+      }
+      img {
+        height: 25px;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .icon {
+        cursor: pointer;
+        margin: 0 15px;
+      }
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .profile {
+        .options {
+          display: none;
+          position: absolute;
+        }
+        span {
+          padding: 10px;
+          cursor: pointer;
+        }
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--main-color);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
